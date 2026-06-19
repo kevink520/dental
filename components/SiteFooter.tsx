@@ -87,6 +87,13 @@ export default function SiteFooter() {
         <div className="legal">
           <span>Terms &amp; Conditions</span>
           <span>Privacy Policy</span>
+          <a
+            href="https://www.vitamin.nyc/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Site by Vitamin &amp; Code
+          </a>
         </div>
       </div>
     </section>

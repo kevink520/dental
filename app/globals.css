@@ -735,6 +735,15 @@ button {
   gap: 26px;
   font-size: 13px;
   color: #8a8a90;
+  flex-wrap: wrap;
+}
+.legal a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.legal a:hover {
+  color: var(--navy);
 }
 
 /* ===== Image hover zoom ===== */
