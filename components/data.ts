@@ -37,7 +37,7 @@ export const services: Service[] = [
     name: "Pediatric Dentistry",
     num: "04",
     sub: "Gentle Care for Little Smiles",
-    src: "https://images.unsplash.com/photo-1620331317314-e6c0815d8de1?q=80&w=700&auto=format&fit=crop",
+    src: "/images/pediatric-dentistry.png",
     desc: "Patient, reassuring care that helps little ones grow up loving the dentist — and their healthy, happy smiles.",
   },
 ];
