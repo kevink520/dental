@@ -30,7 +30,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${newsreader.variable} ${hanken.variable}`}>
+      <body
+        className={`${newsreader.variable} ${hanken.variable} font-sans text-ink antialiased`}
+      >
         {children}
       </body>
     </html>
