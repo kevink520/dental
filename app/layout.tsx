@@ -17,10 +17,35 @@ const hanken = Hanken_Grotesk({
   display: "swap",
 });
 
+const siteTitle = "Lumen Dent — Caring for Your Smile, One Visit at a Time";
+const siteDescription =
+  "Lumen Dental — modern, comfortable dental care for the whole family. Orthodontics, cosmetic dentistry, restoration, and pediatric care.";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://lumendental.vercel.app";
+
 export const metadata: Metadata = {
-  title: "Lumen Dent — Caring for Your Smile, One Visit at a Time",
-  description:
-    "Lumen Dental — modern, comfortable dental care for the whole family. Orthodontics, cosmetic dentistry, restoration, and pediatric care.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    type: "website",
+    images: [
+      {
+        url: "/images/lumendental.png",
+        width: 1200,
+        height: 630,
+        alt: "Lumen Dental",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/images/lumendental.png"],
+  },
 };
 
 export default function RootLayout({
