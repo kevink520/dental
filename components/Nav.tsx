@@ -1,9 +1,14 @@
+import Link from "next/link";
+
 export default function Nav() {
   return (
     <nav className="flex items-center justify-between pt-[26px] pb-2">
-      <div className="font-serif text-[25px] tracking-[-0.01em] text-navy">
+      <Link
+        href="/"
+        className="font-serif text-[25px] tracking-[-0.01em] text-navy no-underline"
+      >
         Lumen<i className="italic">Dént</i>
-      </div>
+      </Link>
       <div className="flex items-center gap-3">
         <button
           className="flex h-11 w-11 cursor-pointer items-center justify-center rounded-full border border-[rgba(20,20,26,0.12)] bg-white/55 transition hover:bg-white/85"
