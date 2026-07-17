@@ -20,3 +20,72 @@ body {
   background: #edeae4;
   text-rendering: optimizeLegibility;
 }
+
+/* ---- Motion utilities (transform/opacity only, GPU-friendly) ---- */
+
+@keyframes marquee-x {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(36, 74, 160, 0.35);
+  }
+  50% {
+    box-shadow: 0 0 0 7px rgba(36, 74, 160, 0);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-x 38s linear infinite;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 22s linear infinite;
+}
+
+.animate-pulse-dot {
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+
+.rise-in {
+  opacity: 0;
+  animation: rise-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--rise-delay, 0ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-spin-slow,
+  .animate-pulse-dot,
+  .rise-in {
+    animation: none;
+    opacity: 1;
+  }
+}
